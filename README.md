@@ -1,2 +1,2 @@
 # HYDROSALE
-Repositorio donde se encuentran elementos relaciondos con el TFG de Kevin GOnzález y Asier Vicente nombrado Hydrosale
+Bienvenido al repositorio oficial de Hydrosale. Aqui encontraras diferentes partes del trabajo realizado por Asier Vicente y Kevin González para el proyecto final de grado (TFG)
