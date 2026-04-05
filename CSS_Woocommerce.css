@@ -1,0 +1,265 @@
+/* Loggin WooCommerce */
+body.woocommerce-account.logged-in {
+  background: linear-gradient(135deg, #0d1f15, #1a3a2a) !important;
+}
+
+body.woocommerce-account.logged-in #page-container,
+body.woocommerce-account.logged-in .et_pb_section,
+body.woocommerce-account.logged-in .et_pb_row,
+body.woocommerce-account.logged-in .et_pb_column {
+  background: transparent !important;
+}
+
+/* Contenedor principal */
+body.woocommerce-account.logged-in .woocommerce {
+  display: flex !important;
+  gap: 30px !important;
+  align-items: flex-start !important;
+  max-width: 1100px !important;
+  margin: 40px auto !important;
+}
+
+/* Menú lateral */
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation {
+  background: rgba(26,58,42,0.5) !important;
+  border: 1px solid rgba(58,140,78,0.2) !important;
+  border-radius: 20px !important;
+  padding: 10px !important;
+  min-width: 200px !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation ul li a {
+  display: block !important;
+  padding: 12px 16px !important;
+  color: rgba(255,255,255,0.6) !important;
+  text-decoration: none !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  transition: all 0.2s !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation ul li a:hover,
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation ul li.is-active a {
+  background: rgba(58,140,78,0.2) !important;
+  color: #a8d5b5 !important;
+}
+
+/* Contenido derecho */
+body.woocommerce-account.logged-in .woocommerce-MyAccount-content {
+  background: rgba(26,58,42,0.5) !important;
+  border: 1px solid rgba(58,140,78,0.2) !important;
+  border-radius: 20px !important;
+  padding: 36px !important;
+  flex: 1 !important;
+  color: rgba(255,255,255,0.7) !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-content p,
+body.woocommerce-account.logged-in .woocommerce-MyAccount-content a {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-content a {
+  color: #a8d5b5 !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-content a:hover {
+  color: #3A8C4E !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-MyAccount-content strong {
+  color: #ffffff !important;
+}
+/* Ocultar las secciones de Pedidos y Descargas del lateral izquierdo */
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--orders,
+body.woocommerce-account.logged-in .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--downloads {
+  display: none !important;
+}
+
+/* Modificar el contenedor de las direcciones del usuario */
+body.woocommerce-account.logged-in .woocommerce-Address {
+  background: rgba(13,31,21,0.6) !important;
+  border: 1px solid rgba(58,140,78,0.2) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-Address h3 {
+  color: #a8d5b5 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-Address address {
+  color: rgba(255,255,255,0.6) !important;
+  font-style: normal !important;
+}
+
+/* Campos de informacion de la cuenta */
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm input[type="text"],
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm input[type="email"],
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm input[type="password"] {
+  background: rgba(13,31,21,0.6) !important;
+  border: 1px solid rgba(58,140,78,0.25) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  box-shadow: none !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm input:focus {
+  border-color: #3A8C4E !important;
+  box-shadow: 0 0 0 3px rgba(58,140,78,0.1) !important;
+  outline: none !important;
+}
+
+/* Labels */
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+/* Textos de cada una de las secciones cambio de color y tamaño */
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm span.description,
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm em {
+  color: rgba(255,255,255,0.35) !important;
+  font-size: 12px !important;
+}
+
+/* Título Cambio de contraseña */
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm fieldset legend,
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm h3 {
+  color: #a8d5b5 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid rgba(58,140,78,0.2) !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Botón Guardar cambios */
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm .woocommerce-Button,
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm button[type="submit"] {
+  background: #3A8C4E !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 32px !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-EditAccountForm button[type="submit"]:hover {
+  background: #2d7a42 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(58,140,78,0.3) !important;
+}
+
+/* Cambio de color al asterisco del Login */
+body.woocommerce-account.logged-in .required {
+  color: #3A8C4E !important;
+}
+/* Cambio de aspecto del mensaje que pone woocommerce en cada sección con un aspecto horrible */
+body.woocommerce-account.logged-in .woocommerce-message,
+body.woocommerce-account.logged-in .woocommerce-info {
+  background: rgba(58,140,78,0.1) !important;
+  border: 1px solid rgba(58,140,78,0.3) !important;
+  border-top: none !important;
+  border-radius: 12px !important;
+  color: #a8d5b5 !important;
+  padding: 16px 20px !important;
+  margin-bottom: 20px !important;
+}
+
+body.woocommerce-account.logged-in .woocommerce-message::before,
+body.woocommerce-account.logged-in .woocommerce-info::before {
+  color: #3A8C4E !important;
+}
+
+/* Aspecto del apartado de reestablecer contraseña */
+body.login.action-rp,
+body.woocommerce-reset-password {
+  background: linear-gradient(135deg, #0d1f15, #1a3a2a) !important;
+}
+
+/* Campos restablecer contraseña con buen aspecto */
+.woocommerce-ResetPassword input[type="password"],
+.woocommerce-ResetPassword input[type="text"],
+#resetpassform input[type="password"] {
+  background: rgba(13,31,21,0.6) !important;
+  border: 1px solid rgba(58,140,78,0.25) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  box-shadow: none !important;
+  width: 100% !important;
+}
+
+.woocommerce-ResetPassword input:focus,
+#resetpassform input:focus {
+  border-color: #3A8C4E !important;
+  box-shadow: 0 0 0 3px rgba(58,140,78,0.1) !important;
+  outline: none !important;
+}
+
+/* Campos restablece password */
+.woocommerce-ResetPassword label,
+#resetpassform label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+/* Texto introducción */
+.woocommerce-ResetPassword p,
+#resetpassform p {
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 14px !important;
+}
+
+/* Botón Guardar */
+.woocommerce-ResetPassword button[type="submit"],
+#resetpassform input[type="submit"],
+#resetpassform button {
+  background: #3A8C4E !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 32px !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.woocommerce-ResetPassword button[type="submit"]:hover,
+#resetpassform button:hover {
+  background: #2d7a42 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(58,140,78,0.3) !important;
+}
+
+/* Otro de los asteriscos */
+.woocommerce-ResetPassword .required {
+  color: #3A8C4E !important;
+}
