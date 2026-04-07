@@ -1,0 +1,203 @@
+<style>
+  .hs-wrapper {
+    font-family: Arial, sans-serif;
+    background: transparent;
+    padding: 10px 0;
+  }
+
+  .hs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hs-titulo {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #3A8C4E;
+  }
+  .hs-live-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(58,140,78,0.12);
+    border: 1px solid rgba(58,140,78,0.3);
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: #a8d5b5;
+  }
+  .hs-live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3A8C4E;
+    animation: hsPulse 1.5s ease-in-out infinite;
+  }
+  @keyframes hsPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  .hs-canal-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #3A8C4E;
+    margin: 40px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(58,140,78,0.2);
+  }
+
+  .hs-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 700px) {
+    .hs-charts-grid { grid-template-columns: 1fr; }
+  }
+
+  .hs-chart-card {
+    background: rgba(26,58,42,0.5);
+    border: 1px solid rgba(58,140,78,0.2);
+    border-radius: 16px;
+    padding: 16px;
+    transition: border-color 0.3s;
+    overflow: hidden;
+  }
+  .hs-chart-card:hover {
+    border-color: rgba(58,140,78,0.5);
+  }
+
+  .hs-chart-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hs-chart-unit {
+    color: #3A8C4E;
+    margin-left: auto;
+  }
+
+  /* quitar el scroll de cada uno de las gráficas */
+  .hs-chart-card iframe {
+    width: 100% !important;
+    height: 260px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .hs-footer {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.05em;
+  }
+</style>
+
+<div class="hs-wrapper">
+
+  <div class="hs-header">
+    <div class="hs-titulo">📡 Datos en tiempo real</div>
+    <div class="hs-live-badge">
+      <div class="hs-live-dot"></div>
+      EN VIVO
+    </div>
+  </div>
+
+  /* Canal 1 */
+  <div class="hs-canal-titulo">🌱 Canal 1 — Sistema Hidropónico</div>
+  <div class="hs-charts-grid">
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🌡️ Temperatura <span class="hs-chart-unit">°C</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/1?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Temperatura&height=260&width=500&yaxis=Temperatura" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">💧 Humedad <span class="hs-chart-unit">%</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/2?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Humedad&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🔬 Temperatura Sonda <span class="hs-chart-unit">°C</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/3?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Temp+Sonda&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🌀 Barómetro <span class="hs-chart-unit">hPa</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/4?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Barometro&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">⚡ Turbidez Tensión <span class="hs-chart-unit">V</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/5?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Turbidez+Tension&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🌊 Turbidez NTU <span class="hs-chart-unit">NTU</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/6?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Turbidez+NTU&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🧪 Calidad Agua <span class="hs-chart-unit">ppm</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/7?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Calidad+Agua&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">⚖️ Módulo Carga <span class="hs-chart-unit">kg</span></div>
+      <iframe src="https://thingspeak.com/channels/3125451/charts/8?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Modulo+Carga&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+  </div>
+
+  /* Canal 2 */
+  <div class="hs-canal-titulo">🌿 Canal 2 — Calidad Aire y Agua</div>
+  <div class="hs-charts-grid">
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">💨 Calidad Aire <span class="hs-chart-unit">ppm</span></div>
+      <iframe src="https://thingspeak.com/channels/3129489/charts/1?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Calidad+Aire+ppm&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🌫️ Calidad Aire <span class="hs-chart-unit">ppb</span></div>
+      <iframe src="https://thingspeak.com/channels/3129489/charts/2?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Calidad+Aire+ppb&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🧪 pH <span class="hs-chart-unit">pH</span></div>
+      <iframe src="https://thingspeak.com/channels/3129489/charts/3?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=pH&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">🌬️ Velocidad Aire <span class="hs-chart-unit">km/h</span></div>
+      <iframe src="https://thingspeak.com/channels/3129489/charts/4?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Velocidad+Aire&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="hs-chart-card">
+      <div class="hs-chart-label">💨 Velocidad Aire 2 <span class="hs-chart-unit">km/h</span></div>
+      <iframe src="https://thingspeak.com/channels/3129489/charts/5?bgcolor=%230d1f15&color=%233A8C4E&dynamic=true&results=20&type=line&title=Velocidad+Aire+2&height=260&width=500" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+  </div>
+
+  <div class="hs-footer">Fuente: ThingSpeak · Canal 1: 3125451 · Canal 2: 3129489 · Se actualiza automáticamente</div>
+
+</div>
